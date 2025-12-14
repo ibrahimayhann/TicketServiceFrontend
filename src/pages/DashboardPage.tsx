@@ -13,6 +13,7 @@ import {
     Legend,
 } from "recharts";
 import TicketService from "../services/TicketService";
+import Spinner from "../component/Spinner";
 
 const STATUS_COLORS: Record<string, string> = {
     Open: "#3b82f6",
@@ -23,9 +24,9 @@ const STATUS_COLORS: Record<string, string> = {
 
 const PRIORITY_COLORS: Record<string, string> = {
     Low: "#22c55e",
-    Medium: "#facc15",
+    Medium: "#5a15faff",
     High: "#f97316",
-    Urgent: "#ef4444",
+    Urgent: "#d71515ff",
 };
 
 type StatusReportItem = { status: string; count: number };
@@ -42,7 +43,7 @@ export default function DashboardPage() {
             return { status, priority };
         },
     });
-
+    if (q.isLoading) return <Spinner />;
     if (q.isLoading) return <div className="dashboard-loading">Yükleniyor…</div>;
     if (q.isError || !q.data)
         return <div className="dashboard-error">Dashboard verisi alınamadı</div>;

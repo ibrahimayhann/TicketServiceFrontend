@@ -2,6 +2,8 @@ import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import "../css/TicketCreate.css";
+import { toast } from "react-toastify";
+
 
 import TicketService from "../services/TicketService";
 import type { TicketPriority, TicketStatus } from "../types/Enums";
@@ -48,6 +50,7 @@ export default function TicketCreate() {
         mutationFn: () => TicketService.createTicket(payload),
         onSuccess: async (created) => {
             await qc.invalidateQueries({ queryKey: ["tickets"] });
+            toast.success("Ticket başarıyla oluşturuldu.");
             navigate(`/tickets/${created.id}`);
         },
     });
@@ -164,6 +167,7 @@ export default function TicketCreate() {
 
                 {createMutation.isError ? (
                     <div className="tc-error">Ticket create sırasında hata oluştu.</div>
+
                 ) : null}
             </div>
         </div>
