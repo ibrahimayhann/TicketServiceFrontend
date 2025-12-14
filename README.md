@@ -90,6 +90,8 @@ npm run dev
 Varsayılan adres:
 http://localhost:5173
 
+Not:Backendi localinize alıp çalıştırdıktan sonra çalıştığı host numarasını alıp frontenddeki service klasöründe servislerin Base url ini güncellemeniz gerekmektedir.
+
 📌 Notlar
 Dashboard grafiklerinde renkler priority ve status’a göre sabittir
 
