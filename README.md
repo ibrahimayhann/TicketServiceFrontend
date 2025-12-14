@@ -3,7 +3,7 @@
 Modern bir **Ticket / Issue Tracking** uygulaması.  
 Backend **ASP.NET Core Web API**, frontend **React + TypeScript** kullanılarak geliştirilmiştir.
 
-Bu proje; ticket oluşturma, güncelleme, yorumlama ve **dashboard analytics** (status / priority bazlı raporlar) özelliklerini içerir.
+Bu proje; ticket oluşturma, güncelleme, yorumlama,yorum ekleme,silme ,güncelleme ve **dashboard analytics** (status / priority bazlı raporlar) özelliklerini içerir.
 
 ---
 Teknolojiler
@@ -22,7 +22,7 @@ Teknolojiler
 - React Query (TanStack Query)
 - Axios
 - Recharts (Dashboard grafikler)
-- CSS (custom, framework yok)
+- CSS 
 
 ---
 
@@ -35,11 +35,13 @@ Teknolojiler
 - Status & Priority yönetimi
 - Assignee ve tag desteği
 
+
 # Yorum Sistemi
 - Ticket’a yorum ekleme
 - Yorum güncelleme
 - Yorum silme
-
+  
+  
 # Dashboard (Analytics)
 - Toplam ticket sayısı
 - Open / Resolved ticket sayıları
