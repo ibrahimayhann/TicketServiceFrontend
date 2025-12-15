@@ -31,7 +31,7 @@ type FormTicket = {
     status: TicketType["status"];
     priority: TicketType["priority"];
     assignee: string;
-    tagsText: string; // UI için: "bug, ui, urgent"
+    tagsText: string; 
 };
 
 type NewCommentForm = {
@@ -60,7 +60,7 @@ export default function TicketDetailsPage() {
         message: "",
     });
 
-    // listede tek tek edit için
+    
     const [editingCommentId, setEditingCommentId] = useState<number | null>(null);
     const [commentEditDraft, setCommentEditDraft] = useState<{
         author: string;
@@ -175,7 +175,7 @@ export default function TicketDetailsPage() {
         updateCommentMutation.isPending ||
         deleteCommentMutation.isPending;
 
-    // refetch: invalidate sonrası tekrar çekme gibi
+    
     const isRefetching = ticketQuery.isFetching || commentsQuery.isFetching;
 
     const ticket = ticketQuery.data;
@@ -212,7 +212,7 @@ export default function TicketDetailsPage() {
         setCommentEditDraft({ author: "", message: "" });
     };
 
-    // --- Render guards ---
+    // Render guards 
     if (!Number.isFinite(ticketId) || ticketId <= 0) {
         return (
             <div className="tdp-page">
@@ -224,7 +224,7 @@ export default function TicketDetailsPage() {
         );
     }
 
-    // İlk açılış loading: sayfayı komple spinner ile göster
+    
     if (ticketQuery.isLoading || commentsQuery.isLoading) {
         return (
             <div className="tdp-page tdp-page-spinner">
@@ -249,7 +249,7 @@ export default function TicketDetailsPage() {
 
     return (
         <div className="tdp-page">
-            {/* Refetch overlay (sayfa açıkken “güncelleniyor…”) */}
+            
             {isRefetching ? (
                 <div className="tdp-busy">
                     <Spinner />
