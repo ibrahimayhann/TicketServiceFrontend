@@ -12,9 +12,8 @@
     --shadow: 0 18px 45px rgba(2, 6, 23, .10);
 }
 
-/* =========================
+
    PAGE – FULL WIDTH
-========================= */
 .tdp-page {
     width: 100%;
     min-height: 100vh;
@@ -27,9 +26,8 @@
         #f6f7fb;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* 
+   HEADER */
 .tdp-header {
     display: flex;
     align-items: center;
@@ -57,13 +55,12 @@
     font-weight: 900;
 }
 
-/* =========================
-   LAYOUT – DAHA GENİŞ
-========================= */
+/* 
+   LAYOUT – DAHA GENİŞ  */
 .tdp-layout {
     display: grid;
     grid-template-columns: 1.45fr 0.85fr;
-    /* ⬅️ kartlar genişledi */
+    
     gap: 28px;
     align-items: stretch;
 }
@@ -75,9 +72,8 @@
     }
 }
 
-/* =========================
-   CARD – DAHA UZUN
-========================= */
+/*
+   CARD*/
 .tdp-card {
     position: relative;
     background: var(--card);
@@ -87,7 +83,6 @@
     box-shadow: var(--shadow);
 
     min-height: 520px;
-    /* ⬅️ HEIGHT ARTTI */
     display: flex;
     flex-direction: column;
 }
@@ -125,9 +120,8 @@
     font-weight: 900;
 }
 
-/* =========================
-   FORM
-========================= */
+/* 
+   FORM */
 .tdp-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -171,12 +165,10 @@
     grid-column: 1 / -1;
 }
 
-/* =========================
-   META
-========================= */
+/* 
+   META */
 .tdp-meta {
     margin-top: auto;
-    /* ⬅️ kartın altına yapışsın */
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
@@ -187,9 +179,8 @@
     font-size: 13px;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+/* 
+   BUTTONS  */
 .tdp-inline-actions {
     display: flex;
     gap: 10px;
@@ -216,9 +207,8 @@
     border: none;
 }
 
-/* =========================
-   COMMENTS – TAM BOY
-========================= */
+/* 
+   COMMENTS  */
 .tdp-comment-add {
     display: grid;
     gap: 12px;
@@ -249,9 +239,8 @@
     background: linear-gradient(180deg, var(--bg1), var(--bg2));
 }
 
-/* =========================
-   ERROR
-========================= */
+/* 
+   ERROR  */
 .tdp-error {
     margin-top: 12px;
     padding: 12px;
