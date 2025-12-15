@@ -17,9 +17,9 @@ type CreateTicketForm = {
     title: string;
     description: string;
     priority: TicketPriority;
-    status: TicketStatus; // UI'da dursun (backend create'de kullanılmıyor)
+    status: TicketStatus; 
     assignee: string;
-    tagsText: string; // "bug, ui"
+    tagsText: string; 
 };
 
 export default function TicketCreate() {
