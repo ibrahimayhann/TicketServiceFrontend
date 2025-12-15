@@ -41,7 +41,7 @@ export default function TicketListPage() {
     const [priority, setPriority] = useState<TicketPriority | "">("");
     const [assignee, setAssignee] = useState("");
 
-    // Pagination (DataGrid 0-based)
+    // Pagination 
     const [paginationModel, setPaginationModel] = useState<GridPaginationModel>({
         page: 0,
         pageSize: 10,
@@ -69,7 +69,7 @@ export default function TicketListPage() {
 
             return res;
         },
-        placeholderData: (prev) => prev, // React Query v5
+        placeholderData: (prev) => prev, 
     });
 
     const items = data?.items ?? [];
@@ -175,7 +175,7 @@ export default function TicketListPage() {
                         Tickets
                     </Typography>
 
-                    {/* ❌ Create Ticket butonu kaldırıldı (navbar'da var) */}
+                    
                 </Stack>
 
                 <Stack direction={{ xs: "column", md: "row" }} spacing={2}>
